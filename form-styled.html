@@ -1,0 +1,248 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: gray;
+            padding: 5px 30px 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(97, 96, 96);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        span {
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline;
+            font-size: 25px;
+            font-weight: normal;
+        }
+
+        form {
+            margin: 15px auto 20px auto;
+            padding: 0px 2px 2px 2px;
+            background-color: white;
+            border-radius: 10px;
+            background-color: cadetblue;
+        }
+
+        .form-header {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            color: white;
+            padding: 15px 0px;
+            text-align: center;
+        }
+
+        .form-label {
+            display: block;
+            margin: 0px 0px 5px 12px;
+        }
+
+        .textarea-label {
+            display: block;
+            margin: 0px 0px 5px 12px;
+        }
+
+        .forms {
+            padding: 20px 29px 0px 25px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: white;
+        }
+
+        .form-group {
+            padding-bottom: 55px;
+        }
+
+        .input-block {
+            width: 95%;
+            position: relative; 
+        }
+
+        .input-content {
+            width: 95%;
+            border: solid 1px gray;
+            border-radius: 5px;
+            font-weight: bold;
+            position: absolute;
+            padding: 9px 5px 9px 40px;     
+        }
+
+        .textarea-block {
+            width: 95%;
+            position: relative;
+        }
+
+        .textarea-content {
+            padding: 12px 5px 0px 38px;
+            width: 95%;
+            min-height: 100px;
+            max-height: 110px;
+            resize: vertical;
+            border: solid 1px gray;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            position: absolute;  
+        }
+
+        .input-content:focus, .textarea-content:focus {
+           outline: none;
+           border: solid 1.5px cadetblue;
+       }
+
+        .button {
+            display: block;
+            background-color: cadetblue;
+            color: white;
+            font-size: 15px;
+            padding: 7px 55px;
+            margin: 80px auto -30px auto;
+            border: solid 1px cadetblue;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .icon-home:before {
+            content: "\e902";
+            font-size: 25px;
+            margin-right: 8px;
+        }
+
+        .icon-user:before {
+            content: "\e971";
+            font-size: 25px;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            z-index: 1; 
+        }
+
+        .icon-envelop:before {
+            content: "\e945";
+            font-size: 25px;
+            position: absolute;
+            top: 4px;
+            left: 5px;
+            z-index: 1;
+        }
+
+        .icon-mobile:before {
+            content: "\e958";
+            font-size: 25px;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            z-index: 1;
+        }
+
+        .icon-pencil:before {
+            content: "\e905";
+            font-size: 22px;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            z-index: 1;
+        }
+
+        .modifier .form-label {
+            display: block;
+            margin: 0px;
+            margin-top: 10px;
+            float: left;
+            width: 100px;
+        }
+
+        .modifier .textarea-label {
+            margin: 15px 0px 5px 0px;
+        }
+
+        .modifier .form-group {
+            padding-bottom: 45px;
+        }
+
+        .modifier .input-block {
+            width: 80%;
+            position: relative; 
+        }
+
+        .modifier .input-content {
+            width: 70%;
+            border: solid 1px gray;
+            border-radius: 5px;
+            font-weight: bold;
+            position: absolute;
+            padding: 9px 5px 9px 40px;     
+        }
+
+        .modifier .icon-user:before {
+            content: "\e971";
+            font-size: 25px;
+            position: absolute;
+            top: 5px;
+            left: 104px;
+            z-index: 1; 
+        }
+
+        .modifier .icon-envelop:before {
+            content: "\e945";
+            font-size: 25px;
+            position: absolute;
+            top: 4px;
+            left: 104px;
+            z-index: 1;
+        }
+
+        .modifier .icon-mobile:before {
+            content: "\e958";
+            font-size: 25px;
+            position: absolute;
+            top: 5px;
+            left: 104px;
+            z-index: 1;
+        } 
+
+    </style> 
+</head> 
+<body>
+     <form>
+         <div class="form-header icon-home"><span>Обратная связь</span></div>
+         <div class="forms">
+         <div class="form-group">
+            <label for="name" class="form-label">Имя:</label>
+            <div class="input-block icon-user">
+                <input id="name" name="name" type="text" placeholder="Введите Ваше имя" class="input-content">
+            </div>        
+         </div>
+
+         <div class="form-group">
+            <label for="mail" class="form-label">Email:</label>
+            <div class="input-block icon-envelop">
+                <input id="mail" name="mail" type="email" placeholder="Введите адрес Вашей почты" class="input-content">
+            </div>        
+         </div>
+
+         <div class="form-group">
+            <label for="tel-number" class="form-label">Телефон:</label>
+            <div class="input-block icon-mobile">
+                <input id="tel-number" name="tel-number" type="tel" placeholder="Введите номер телефона" class="input-content">
+            </div>        
+         </div>
+         
+         <div class="form-group">
+            <label for="message" class="textarea-label">Сообщение:</label>
+            <div class="textarea-block icon-pencil">
+                <textarea id="message" name="message" placeholder="Текст сообщения" class="textarea-content"></textarea>
+            </div>        
+         </div>
+
+         <div class="form-group">
+            <input type="submit" value="Отправить" class="button">    
+         </div>
+         </div> 
+     </form>	 
+</body> 
+</html>
